@@ -1,0 +1,24 @@
+syntax = "proto3";
+/*
+    TODO: remove this file from the proto folder and let Shell Script download it through a common Repo.
+*/
+
+package com.mindtickle.grpc;
+
+service SignService {
+    rpc GetSignedUrl(SignRequest) returns (Url) {}
+}
+
+message SignRequest {
+    sint32 ExpiryInMinutes = 1;
+    Resource Resource = 2;
+}
+
+message Resource {
+    string S3Bucket = 1;
+    string S3Key = 2;
+}
+
+message Url {
+    string url = 1;
+}
