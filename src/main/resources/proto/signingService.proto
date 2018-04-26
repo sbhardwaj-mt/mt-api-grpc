@@ -1,7 +1,4 @@
 syntax = "proto3";
-/*
-    TODO: remove this file from the proto folder and let Shell Script download it through a common Repo.
-*/
 
 package com.mindtickle.grpc;
 
